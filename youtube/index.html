@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Youtube viewer</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" type="text/css" href="style/reset.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="libs/jquery-ui.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+    <div class="container">
+        <header class="clearfix">
+            <a href="#">
+                <img class="logo" src="images/MyTube.png" alt="youtubeLogo">
+            </a>
+            <div class="searchWrap">
+                <div class="inputArea"><input id="searchInput" class="youInput" type="text"><span class="icon-search"></span></div>
+                <div class="filterStatus"></div>
+                <button id="enableSearchOrder" class="filterButton">Order by</button>
+                <button id="enableSearchDuration" class="filterButton">Configure duration</button>
+                <button id="enableSearchAfter" class="filterButton">Search after</button>
+                <ul class="searchOrder filterList">
+                    <li id="title">Title</li>
+                    <li id="viewCount">View Count</li>
+                    <li id="date">Date</li>
+                    <li id="relevance">Relevance</li>
+                </ul>
+                <ul class="searchDuration filterList">
+                    <li id="short">Short (less then 4 min)</li>
+                    <li id="medium">Medium</li>
+                    <li id="long">Long (more then 20 min)</li>
+                </ul>
+                <div class="dateAfterChooser">
+                    <input type="text" id="searchAfter" class="youInput">
+                    <button id="searchAfterButton">OK</button>
+                </div>
+
+            </div>
+            <div class="contacts">
+                <a href="https://twitter.com/Shagon1k" class="contactTwitter"></a><a href="https://www.facebook.com/profile.php?id=100001128590317" class="contactFB"></a>
+            </div>
+        </header>
+        <div class="mainContent">
+            <div class="content">
+
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+    <div class="overlay">
+        <div class="videoPlayer" id="videoPlayer">
+            <a href="#" title="close" id="closeVideo" class="closeVideo">X</a>
+            <iframe width="100%" height="100%" id="ytPlayer" src="http://www.youtube.com/embed/?autoplay=1" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="libs/jquery-2.2.3.min.js"></script>
+    <script src="libs/jquery-ui.js"></script>
+    <script src="scripts/videoParser.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/videoViewer.js"></script>
+</body>
+</html>
